@@ -56,3 +56,8 @@ td {
     background-image: url("../img/ortigia_vertical.jpg");
   }
 }
+@media (max-width: 600px) {
+  .table{
+border-spacing: 10px;
+  }
+}
