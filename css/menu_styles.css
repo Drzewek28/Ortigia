@@ -1,4 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+nav ul a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: center;
+  text-align: center;
+}
+
+nav ul a:hover {
+  background-color: #000;
+  color: rgb(255, 255, 255);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
 .top-nav {
     font-family: "Raleway";
     display: flex;
@@ -88,8 +110,8 @@
     .menu {
         position: absolute;
         top: 0;
-        margin-top: 50px;
         left: 0;
+        margin-top: 50px;
         flex-direction: column;
         width: 100%;
         justify-content: center;
