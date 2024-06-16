@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napoje</title>
+    <link rel="stylesheet" href="css_pizza/zdjecia.css">
+</head>
+  <body>
+      <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="pizza.html">Pizza</a>
+        <a href="dania.html">Dania obiadowe</a>
+        <a href="makarony.html">Makarony i sałatki</a>
+        <a href="promocje.html">Pizza promocyjna</a>
+        <a href="napoje.html">Napoje</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="zdjecia.html">Zdjęcia</a>
+      </nav>
+      <div class="slideshow-container">
+      <!-- Ramki z obrazami -->
+      <div class="mySlides">
+        <img src="zdjecia/wnetrze1.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <img src="zdjecia/wnetrze2.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <img src="zdjecia/danie1.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="zdjecia/danie3.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="zdjecia/danie4.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="zdjecia/danie5.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="zdjecia/danie6.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="zdjecia/danie7.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <img src="zdjecia/nagroda1.jpg" style="width:100%">
+      </div>
+      <!-- Przyciski do przewijania zdjęć -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    <!-- Punkty do wyboru konkretnej ramki -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Funkcja przesuwająca ramki o n (n > 0) w prawo lub o n (n < 0) w lewo
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Funkcja ustawiająca wyświetlaną ramkę na numer n
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      var captionText = document.getElementById("caption");
+      
+      // Przejście na początek pokazu, jeśli przewijamy poza jego granice
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      
+      // Ukrycie niepotrzebnych ramki i ustawienie aktywnego punktu
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+  </script>
+  
+</body>
+</html>
