@@ -1,128 +1,147 @@
-<!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Makarony</title>
-    <link rel="stylesheet" href="css_pizza/makarony.css">
-</head>
-<body>
-    <nav>
-		<a href="index.html">Strona główna</a>
-		<a href="pizza.html">Pizza</a>
-		<a href="dania.html">Dania obiadowe</a>
-		<a href="makarony.html">Makarony i sałatki</a>
-		<a href="promocje.html">Pizza promocyjna</a>
-		<a href="napoje.html">Napoje</a>
-        <a href="kontakt.html">Kontakt</a>
-		<a href="zdjecia.html">Zdjęcia</a>
-	</nav>
-    <div id="makarony">
-        <h2>MAKARONY (Porcja 400g)</h2>
-        <table id="makarony_menu">
-        <tr>
-        <td>Penne Pomodoro: makaron penne z sosem pomidorowym,bazylią i
-        parmezanem</td>
-        <td>20zł</td>
-        </tr>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/menu_styles.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <nav class="top-nav">
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="pizza.html">Pizza</a></li>
+        <li><a href="dania.html">Dania obiadowe</a></li>
+        <li><a href="makarony.html">Makarony i sałatki</a></li>
+        <li><a href="promocje.html">Pizza promocyjna</a></li>
+        <li><a href="napoje.html">Napoje</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="zdjecia.html">Zdjęcia</a></li>
+      </ul>
+      <div><a href="index.html">Ortigia</a></div>
+    </nav>
+    <div class="table_front">
+      <h2>MAKARONY (Porcja 400g)</h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              Penne Pomodoro: makaron penne z sosem pomidorowym, bazylią i parmezanem
+            </td>
+            <td>20zł</td>
+          </tr>
 
+          <tr>
+            <td>
+              Penne z kurczakiem: makaron penne z kurczakiem, szpinakiem i pomidorkami koktailowymi z sosem śmietanowym
+            </td>
+            <td>22zł</td>
+          </tr>
 
+          <tr>
+            <td>
+              Spaghetti Bolognesse: makaron spaghetti z sosem mięsno-warzywny
+            </td>
+            <td>22zł</td>
+          </tr>
 
-        <tr>
-        <td>Penne z kurczakiem: makaron penne z kurczakiem,szpinakiem i pomidorkami koktailowymi z sosem śmietanowym</td>
-        <td>22zł</td>
-</tr>
+          <tr>
+            <td>
+              Spaghetti Carbonara: makaron spaghetti z boczkiem, cebulą, czosnkiem w sosie śmietanowym
+            </td>
+            <td>22zł</td>
+          </tr>
 
-
-
-        <tr>
-        <td>Spaghetti Bolognesse : makaron spaghetti z sosem mięsno-warzywny</td>
-        <td>22zł</td>
-        </tr>
-
-
-
-        <tr>
-       <td>Spaghetti Carbonara : makaron spaghetti z boczkiem,cebulą,czosnkiem w sosie śmietanowym</td>
-       <td>22zł</td>
-            </tr>
-
-
-            <tr>
-
-        <td>Tagliatelle Salmone: makaron w sosie śmietanowo-cytrynowym z łososiem, szparagami i cebulą</td>
-        <td>24zł</td>
-                </tr>
-
-
-
-        <tr>
-        <td>Tagliatelle Mexikana: makaron z szynką,brokułem,cebulą z ostrym sosem śmietanowym</td>
+          <tr>
+            <td>
+              Tagliatelle Salmone: makaron w sosie śmietanowo-cytrynowym z łososiem, szparagami i cebulą
+            </td>
             <td>24zł</td>
-        </tr>
+          </tr>
 
-
-
-
-        <tr>
-        <td>Penne z indykiem: makaron penne z indykiem,cukinią,fetą,czosnkiem i rukolą</td>
-        <td>24zł</td>
-        </tr>
-
-
-
-        <tr>
-            <td>Tagliatelle z szynką parmeńską: makaron z szynką parmeńską, czosnkiem, pomidorki,rukola,żółtko,sos śmietanowy</td>
+          <tr>
+            <td>
+              Tagliatelle Mexikana: makaron z szynką, brokułem, cebulą z ostrym sosem śmietanowym
+            </td>
             <td>24zł</td>
-        </tr>
+          </tr>
 
-        </table>
-        <h2 id="sal">SAŁATKI(Porcja 400g)</h2>
-        <h4>Do każdej sałatki bułeczki gratis</h4>
-        <table id="salatki">
+          <tr>
+            <td>
+              Penne z indykiem: makaron penne z indykiem, cukinią, fetą, czosnkiem i rukolą
+            </td>
+            <td>24zł</td>
+          </tr>
 
+          <tr>
+            <td>
+              Tagliatelle z szynką parmeńską: makaron z szynką parmeńską, czosnkiem, pomidorki, rukola, żółtko, sos śmietanowy
+            </td>
+            <td>24zł</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>SAŁATKI (Porcja 400g)</h2>
+      <h4>Do każdej sałatki bułeczki gratis</h4>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              Sałatka Grecka: sałata lodowa, pomidor, ogórek, papryka, cebula czerwona, feta, oliwki, sos vinegrette
+            </td>
+            <td>26zł</td>
+          </tr>
 
-<tr>
-            <td>Sałatka Grecka: sałata lodowa, pomidor,ogórek,papryka,cebula czerwona,feta,
-            oliwki, sos vinegrette</td>
-                <td>26zł</td> 
-            </tr>
+          <tr>
+            <td>
+              Sałatka z kurczakiem: mix sałat,pomidor,pomarańcza,cebula
+              czerwona,oliwki,pieczony kurczak,seler naciowy,cytrynowy sos
+              vinegrette
+            </td>
+            <td>26zł</td>
+          </tr>
 
+          <tr>
+            <td>
+              Sałatka Cesar: sałata lodowa,grilowana pierś
+              kurczaka,bekon,grzanki,pomidor,ogórek,sos ala cesar
+            </td>
+            <td>26zł</td>
+          </tr>
 
+          <tr>
+            <td>
+              Sałatka z łososiem: mix sałat,feta,pomidorki koktajlowe,oliwki
+              czarne,łosoś wędzony,cebula czerwona,cytrynowy vinegrette
+            </td>
+            <td>26zł</td>
+          </tr>
 
-            <tr>
-            <td>Sałatka z kurczakiem: mix sałat,pomidor,pomarańcza,cebula czerwona,oliwki,pieczony kurczak,seler naciowy,cytrynowy sos vinegrette</td>
-            <td>26zł</td> 
-                </tr>
+          <tr>
+            <td>
+              Sałatka z szynką parmeńską: sałata,rukola,pieczone-marynowane
+              buraki,słonecznik, ser pleśniowy,szynka parmeńska,sos
+              miodowo-musztardowy
+            </td>
+            <td>26zł</td>
+          </tr>
 
-            <tr>
-            <td>Sałatka Cesar: sałata lodowa,grilowana pierś kurczaka,bekon,grzanki,pomidor,ogórek,sos ala cesar
-            <td>26zł</td> 
-            </tr>
-
-
-
-            
-            <tr>
-            <td>Sałatka z łososiem: mix sałat,feta,pomidorki koktajlowe,oliwki czarne,łosoś wędzony,cebula czerwona,cytrynowy vinegrette
-                <td>26zł</td> 
-                    </tr>
-
-
-
-
-            <tr>
-            <td>Sałatka z szynką parmeńską: sałata,rukola,pieczone-marynowane buraki,słonecznik, ser pleśniowy,szynka parmeńska,sos miodowo-musztardowy</td>
-            <td>26zł</td> 
-            </tr>      
-            
-            
-            <tr>
-            <td>Sałatka z kurczakiem: sałata lodowa,rukola,pieczona pierś z kurczaka, pomidorki koktajlowe ,prażone orzechy włoskie,gruszka,ser pleśniowy,sos balsamico</td>
-            <td>26zł</td> 
-            </tr>
-        </table
+          <tr>
+            <td>
+              Sałatka z kurczakiem: sałata lodowa,rukola,pieczona pierś z
+              kurczaka, pomidorki koktajlowe ,prażone orzechy
+              włoskie,gruszka,ser pleśniowy,sos balsamico
+            </td>
+            <td>26zł</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-</body>
+  </body>
 </html>

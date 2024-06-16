@@ -1,197 +1,140 @@
-<!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dania obiadowe</title>
-    <link rel="stylesheet" href="css_pizza/dania.css">
-</head>
-<body>
-    <nav>
-		<a href="index.html">Strona główna</a>
-		<a href="pizza.html">Pizza</a>
-		<a href="dania.html">Dania obiadowe</a>
-		<a href="makarony.html">Makarony i sałatki</a>
-		<a href="promocje.html">Pizza promocyjna</a>
-		<a href="napoje.html">Napoje</a>
-        <a href="kontakt.html">Kontakt</a>
-		<a href="zdjecia.html">Zdjęcia</a>
-	</nav>
-
-<div id="dania">
-    <h2>DANIA OBIADOWE</h2>
-    <h4>Porcja mięsa/ryby -200g</h4>
-    <h5>Do wyboru: ziemniaki gotowane, frytki, ryż, kasza</h5>
-
-<table id="dania_menu">
-    <tr>
-    <td>Karczek duszony ,ziemniaki , surówka</td>  
-    <td>22zł</td>
-    </tr>
-
-
-
-
-    <tr>
-        <td>Kurczak po włosku, ziemniaki, surówka</td> 
-        <td>26zł</td>
-    </tr>
-
-
-
-
-
-
-    <tr>
-        <td>Schab  z warzywami, ziemniaki, surówka</td>
-        <td>26zł</td>
-    </tr>                                                             
-
-
-
-
-
-<tr>
-    <td>Polędwiczki wieprzowe w sosie borowikowym, ziemniaki , surówka</td>
-    <td>29zł</td>
-</tr>
-
-
-
-
-
-
-<tr>
-    <td>Łosoś pieczony, ziemniaki, surówka </td>
-    <td>35zł</td>
-</tr>
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-    <td>Schab po Królewsku, ziemniaki, surówka</td>
-    <td>27zł</td>
-</tr>
-
-
-
-
-
-
-
-<tr>
-    <td>Pierś w szynce parmeńskiej,frytki,surówka</td>
-    <td>28zł</td>
-</tr>
-
-
-
-
-
-
-
-
-<tr>
-    <td>Szaszłyk  polędwiczek drobiowych, frytki,surówka </td>
-    <td>26zł</td>
-
-</tr>
-
-
-
-
-<tr>
-    <td>Golonka wieprzowa,ziemniaki,surówka</td>
-    <td>29zł</td>
-</tr>
-
-
-
-
-
-
-
-
-
-<tr>
-    <td>Udziec z indyka  (pieczony indyk podawany w foremce z ciasta,kaszą,sosem grzybowym i ogórkiem kiszonym)</td>
-    <td>24zł</td>
- </tr>
-
-
-
-
-
-<tr>
-    <td>Pierogi ruskie (400g) (podawane ze smażoną cebulką)</td>
-    <td>21zł</td>
-</tr>
-
-</table>
-<h2 id="zupy">Zupy: </h2>
-<table id="zupy_menu">
-    <tr>
-    <td>POMIDOROWA</td>
-    <td>10zł</td>
-    </tr>
-
-
-    <tr>
-    <td>ŻUREK</td> 
-    <td>11zł</td>
-    </tr>
-
-
-
-    <tr>
-    <td>WĘGIERSKA GULASZOWA</td>
-    <td>12zł</td>
-    </tr>
-
-    </table>
-
-
-    <table id="fast-food">
-        <h2>Dania fast-food:</h2>
-
-
-
-
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/menu_styles.css" />
+    <link rel="stylesheet" href="css/pizza.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <nav class="top-nav">
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="pizza.html">Pizza</a></li>
+        <li><a href="dania.html">Dania obiadowe</a></li>
+        <li><a href="makarony.html">Makarony i sałatki</a></li>
+        <li><a href="promocje.html">Pizza promocyjna</a></li>
+        <li><a href="napoje.html">Napoje</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="zdjecia.html">Zdjęcia</a></li>
+      </ul>
+      <div><a href="index.html">Ortigia</a></div>
+    </nav>
+
+    <div class="table_front">
+      <h3>DANIA OBIADOWE</h3>
+      <h4>Porcja mięsa/ryby - 200g</h4>
+      <h5>Do wyboru: ziemniaki gotowane, frytki, ryż, kasza</h5>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>Karczek duszony, ziemniaki, surówka</td>
+            <td>22zł</td>
+          </tr>
+
+          <tr>
+            <td>Kurczak po włosku, ziemniaki, surówka</td>
+            <td>26zł</td>
+          </tr>
+
+          <tr>
+            <td>Schab z warzywami, ziemniaki, surówka</td>
+            <td>26zł</td>
+          </tr>
+          <tr>
+            <td>
+              Polędwiczki wieprzowe w sosie borowikowym, ziemniaki, surówka
+            </td>
+            <td>29zł</td>
+          </tr>
+
+          <tr>
+            <td>Łosoś pieczony, ziemniaki, surówka</td>
+            <td>35zł</td>
+          </tr>
+
+          <tr>
+            <td>Schab po Królewsku, ziemniaki, surówka</td>
+            <td>27zł</td>
+          </tr>
+
+          <tr>
+            <td>Pierś w szynce parmeńskiej, frytki, surówka</td>
+            <td>28zł</td>
+          </tr>
+
+          <tr>
+            <td>Szaszłyk polędwiczek drobiowych, frytki, surówka</td>
+            <td>26zł</td>
+          </tr>
+
+          <tr>
+            <td>Golonka wieprzowa, ziemniaki, surówka</td>
+            <td>29zł</td>
+          </tr>
+
+          <tr>
+            <td>
+              Udziec z indyka (pieczony indyk podawany w foremce z ciasta z kaszą, sosem grzybowym i ogórkiem kiszonym)
+            </td>
+            <td>24zł</td>
+          </tr>
+
+          <tr>
+            <td>Pierogi ruskie (400g) (podawane ze smażoną cebulką)</td>
+            <td>21zł</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Zupy:</h2>
+      <table class="table">
         <tr>
-        <td>Kanapka Gyros XXL</td>
-        <td>21zł</td>
+          <td>POMIDOROWA</td>
+          <td>10zł</td>
         </tr>
 
-
+        <tr>
+          <td>ŻUREK</td>
+          <td>11zł</td>
+        </tr>
 
         <tr>
-            <td>Gyros,frytki i świeże warzywa</td> 
-            <td>22zł</td>
-            </tr>
-                   
-            <tr>
-            <td>Tortilla z kurczakiem</td>
-            <td>21zł</td>
-            </tr>
+          <td>WĘGIERSKA GULASZOWA</td>
+          <td>12zł</td>
+        </tr>
+      </table>
 
+      <table class="table">
+        <h2>Dania fast-food:</h2>
 
+        <tr>
+          <td>Kanapka Gyros XXL</td>
+          <td>21zł</td>
+        </tr>
 
-            <tr>
-                <td>Schoarma ,frytki,surówka</td> 
-                <td>23zł</td>
-                </tr>                                     
+        <tr>
+          <td>Gyros,frytki i świeże warzywa</td>
+          <td>22zł</td>
+        </tr>
 
-    </table>
-</div>
-</body>
+        <tr>
+          <td>Tortilla z kurczakiem</td>
+          <td>21zł</td>
+        </tr>
+
+        <tr>
+          <td>Schoarma ,frytki,surówka</td>
+          <td>23zł</td>
+        </tr>
+      </table>
+    </div>
+  </body>
 </html>
