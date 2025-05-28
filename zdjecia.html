@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdjęcia</title>
+    <link rel="stylesheet" href="css_pizza/zdjecia_new.css">
+    <link rel="stylesheet" href="css_pizza/zdjecia_gallery.css" />
+    <link rel="stylesheet" href="css_pizza/main_new.css" />
+    <link rel="icon" type="image/png" href="favicon/logo_465x320.png" />
+</head>
+<body>
+      <nav>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="index.html">Strona główna</a>
+          <a href="pizza_new.html">Pizza</a>
+          <a href="dania.html">Dania obiadowe</a>
+          <a href="makarony.html">Makarony i sałatki</a>
+          <a href="promocje.html">Pizza promocyjna</a>
+          <a href="napoje.html">Napoje</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="zdjecia.html">Zdjęcia</a>
+        </div>
+      </nav>
+      <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+          const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+          hamburger.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('active');
+        });
+      </script>
+      <div class="image-viewer-container">
+        <button class="nav-button" id="prevBtn" onclick="prevImage()">&#10094;</button>
+        <img id="largeImage" src="zdjecia/danie1.jpg" alt="large view" />
+        <button class="nav-button" id="nextBtn" onclick="nextImage()">&#10095;</button>
+      </div>
+      <div class="gallery">
+        <img src="zdjecia/danie1.jpg" alt="danie1" onclick="showImage(this.src)" />
+        <img src="zdjecia/danie2.jpg" alt="danie2" onclick="showImage(this.src)" />
+        <img src="zdjecia/danie3.jpg" alt="danie3" onclick="showImage(this.src)" />
+        <img src="zdjecia/danie4.jpg" alt="danie4" onclick="showImage(this.src)" />
+        <img src="zdjecia/danie5.jpg" alt="danie5" onclick="showImage(this.src)" />
+        <img src="zdjecia/danie6.jpg" alt="danie6" onclick="showImage(this.src)" />
+        <img src="zdjecia/danie7.jpg" alt="danie7" onclick="showImage(this.src)" />
+        <img src="zdjecia/nagroda1.jpg" alt="nagroda1" onclick="showImage(this.src)" />
+        <img src="zdjecia/wnetrze1.jpg" alt="wnetrze1" onclick="showImage(this.src)" />
+        <img src="zdjecia/wnetrze2.jpg" alt="wnetrze2" onclick="showImage(this.src)" />
+      </div>
+      <script>
+        const images = [
+          "zdjecia/danie1.jpg",
+          "zdjecia/danie2.jpg",
+          "zdjecia/danie3.jpg",
+          "zdjecia/danie4.jpg",
+          "zdjecia/danie5.jpg",
+          "zdjecia/danie6.jpg",
+          "zdjecia/danie7.jpg",
+          "zdjecia/nagroda1.jpg",
+          "zdjecia/wnetrze1.jpg",
+          "zdjecia/wnetrze2.jpg"
+        ];
+        let currentIndex = 0;
+
+        function showImage(src) {
+          const largeImage = document.getElementById('largeImage');
+          largeImage.src = src;
+          currentIndex = images.indexOf(src);
+        }
+
+        function prevImage() {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          showImage(images[currentIndex]);
+        }
+
+        function nextImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          showImage(images[currentIndex]);
+        }
+      </script>
+  </body>
+</html>

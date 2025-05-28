@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="css_pizza/pizza_new.css">
+    <link rel="stylesheet" href="css_pizza/main_new.css">
+    <link rel="icon" type="image/png" href="favicon/logo_465x320.png" />
+</head>
+<body>
+    <nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Strona główna</a>
+        <a href="pizza.html">Pizza</a>
+        <a href="dania.html">Dania obiadowe</a>
+        <a href="makarony.html">Makarony i sałatki</a>
+        <a href="promocje.html">Pizza promocyjna</a>
+        <a href="napoje.html">Napoje</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="zdjecia.html">Zdjęcia</a>
+      </div>
+    </nav>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+        hamburger.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('active');
+      });
+    </script>
+    <div id="pizza">
+        <h3>Proponujemy Państwu ciasto cienkie lub średnie.</h3>
+         
+        <p>Rozmiary: 32cm, 42cm</p>
+        <table id="pizza_menu">
+       <tr> 
+       <td>1.Margherita: sos, ser</td>  
+       <td>22,00</td>
+       <td>41,00</td>
+       </tr>
+
+       <tr>
+       <td>2.Vezuwiusz: sos, ser, szynka</td> 
+       <td>23,00</td> 
+       <td>42,00</td>
+       </tr>
+
+       <tr>
+       <td>3.Funghi: sos, ser, pieczarki</td>
+        <td>23,00</td> 
+        <td>42,00</td>
+        </tr>
+
+         <tr>  
+       <td>4.Hawajska: sos, ser, szynka, ananas</td>
+        <td>23,00</td> 
+        <td>43,00</td>
+        </tr>
+
+        <tr>
+        <td>5.Capricciosa: sos, ser, szynka, pieczarki, oliwki</td>
+        <td>25,00</td> 
+        <td>43,00</td>
+        </tr>
+
+        <tr>
+       <td>6.Salami: sos, ser, salami, oliwki, czosnek, extra ser</td>
+        <td>25,00</td> 
+        <td>47,00</td>
+        </tr>
+
+        <tr>
+       <td>7.Vegetariana: sos, ser, pieczarki, papryka, cebula, oliwki</td>
+        <td>28,00</td> 
+        <td>45,00</td>
+        </tr>
+
+        <tr>
+       <td>8.Cukinia: sos, ser, cukinia, feta, szpinak, czosnek, fasolka</td>
+        <td>29,00</td> 
+        <td>49,00</td>
+        </tr>
+        
+        <tr>
+       <td>9.Werona: sos, ser, salami pikantne, boczek, cebula, pieczarki</td>
+        <td>29,00</td> 
+        <td>49,00</td>
+        </tr>
+
+        <tr>
+       <td>10.Grecka: sos, ser, papryka, pomidor, oliwki, feta, szparagi</td>
+        <td>29,00</td>
+        <td>49,00</td>
+        </tr>
+
+        <tr>
+       <td>11.Szpinakowa: sos, ser, szpinak, jajko, czosnek, karczochy</td> 
+        <td>29,00</td> 
+        <td>48,00</td>
+        </tr>
+
+        <tr>
+       <td>12.Serowa: sos, ser, 4 rodzaje sera</td> 
+        <td>30,00</td> 
+        <td>48,00</td>
+        </tr>
+
+        <tr>
+       <td>13.Florencja: sos, ser, kurczak, ananas, brzoskwinia, oliwki, extra ser</td>
+        <td>30,00</td> 
+        <td>48,00</td>
+        </tr>
+
+        <tr>
+       <td>14.Genua: sos, ser, boczek, pieczarki, pomidor, papryka, kurczak, kiełbasa, czosnek</td>
+        <td>30,00</td> 
+        <td>50,00</td>
+        </tr>
+
+        <tr>             
+       <td>15.Pappa: sos, ser, szynka, kurczak, pomidor, kukurydza, extra ser</td>
+        <td>30,00</td> 
+        <td>50,00</td>
+        </tr>
+
+        <tr>
+       <td>16.Ferrara: sos, ser, boczek, kurczak gyros, oscypek, ogórek kiszony</td>
+        <td>31,00</td> 
+        <td>51,00</td>
+    </tr>
+
+         <tr>                                                        
+       <td>17.Salerno: sos, ser, seler naciowy, fasolka szparagowa, cebula, brokuł</td>
+        <td>31,00</td> 
+        <td>51,00</td>
+        </tr>
+
+        <tr>
+       <td>18.Al Paccino: sos, ser, boczek, wołowina, papryka jalapeno, cebula, papryka</td> 
+        <td>31,00</td> 
+        <td>51,00</td>
+        </tr>
+
+        <tr>
+       <td>19.Padwa: sos, ser, kurczak, rukola, cebula, pomidor, sos czosnkowy</td>
+        <td>32,00</td> 
+        <td>52,00</td>
+        </tr>
+
+        <tr>
+       <td>20.Katania: sos, ser, extra salami, extra chili, extra ser</td>
+        <td>33,00</td> 
+        <td>53,00</td>
+        </tr>
+
+        <tr>
+       <td>21.Mesyna: sos, ser, łosoś, anchois, jajko, cebula, pomidor</td> 
+        <td>33,00</td> 
+        <td>53,00</td>
+        </tr>
+
+        <tr>
+       <td>22.Parma: sos, ser, szynka parmeńska, rukola, parmezan</td>
+        <td>34,00</td> 
+        <td>54,00</td>
+        </tr>
+
+        <tr>
+       <td>23.Ortigia: sos, ser, osiem dowolnych składników</td>
+        <td>35,00</td> 
+        <td>55,00</td>
+        </tr>
+
+        <tr>
+       <td>24.LiVorno: sos, ser, borowiki, kurki, czosnek, podgrzybki</td>
+        <td>36,00</td> 
+        <td>56,00</td>
+        </tr>
+
+
+
+
+        <tr>
+       <td>25.LiVorno:sos,ser,borowiki,kurki,czosnek,podgrzybki </td>
+        <td>31,00</td> 
+        <td> 47,00</td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makarony</title>
+    <link rel="stylesheet" href="css_pizza/makarony_new.css" />
+    <link rel="stylesheet" href="css_pizza/main_new.css" />
+    <link rel="icon" type="image/png" href="favicon/logo_465x320.png" />
+</head>
+<body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Strona główna</a>
+            <a href="pizza_new.html">Pizza</a>
+            <a href="dania.html">Dania obiadowe</a>
+            <a href="makarony.html">Makarony i sałatki</a>
+            <a href="promocje.html">Pizza promocyjna</a>
+            <a href="napoje.html">Napoje</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="zdjecia.html">Zdjęcia</a>
+        </div>
+    </nav>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+            hamburger.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    <div id="makarony">
+        <h2>MAKARONY (Porcja 400g)</h2>
+        <div class="makarony-grid">
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Penne Pomodoro</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron penne z sosem pomidorowym, bazylią i parmezanem
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Penne z kurczakiem</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron penne z kurczakiem, szpinakiem i pomidorkami koktailowymi z sosem śmietanowym
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Spaghetti Bolognesse</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron spaghetti z sosem mięsno-warzywnym
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Spaghetti Carbonara</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron spaghetti z boczkiem, cebulą, czosnkiem w sosie śmietanowym
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Tagliatelle Salmone</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron w sosie śmietanowo-cytrynowym z łososiem, szparagami i cebulą
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Tagliatelle Mexikana</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron z szynką, brokułem, cebulą z ostrym sosem śmietanowym
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Penne z indykiem</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron penne z indykiem, cukinią, fetą, czosnkiem i rukolą
+                </div>
+            </div>
+        </div>
+        <h2 id="sal">SAŁATKI (Porcja 400g)</h2>
+        <h4>Do każdej sałatki bułeczki gratis</h4>
+        <div class="makarony-grid">
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka Grecka</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    sałata lodowa, pomidor, ogórek, papryka, cebula czerwona, feta, oliwki, sos vinegrette
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka z kurczakiem</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    mix sałat, pomidor, pomarańcza, cebula czerwona, oliwki, pieczony kurczak, seler naciowy, cytrynowy sos vinegrette
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka Cesar</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    sałata lodowa, grillowana pierś kurczaka, bekon, grzanki, pomidor, ogórek, sos ala cesar
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka z łososiem</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    mix sałat, feta, pomidorki koktajlowe, oliwki czarne, łosoś wędzony, cebula czerwona, cytrynowy vinegrette
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka z szynką parmeńską</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    sałata, rukola, pieczone-marynowane buraki, słonecznik, ser pleśniowy, szynka parmeńska, sos miodowo-musztardowy
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka z kurczakiem</div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    sałata lodowa, rukola, pieczona pierś z kurczaka, pomidorki koktajlowe, prażone orzechy włoskie, gruszka, ser pleśniowy, sos balsamico
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js_pizza/pizza_cards.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Updated CSS for makarony cards to match pizza cards style */
+
+.makarony-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.makarony-card {
+    background: linear-gradient(135deg, #bf3131 0%, #7d0a0a 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(125, 10, 10, 0.15);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: none;
+    position: relative;
+    color: white;
+}
+
+.makarony-card:hover {
+    box-shadow: 0 8px 30px rgba(191, 49, 49, 0.3);
+    transform: translateY(-5px);
+}
+
+.makarony-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.makarony-name {
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.ingredients-toggle {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ingredients-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.ingredients-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.plus-icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.plus-icon::before {
+    width: 2px;
+    height: 16px;
+    left: 7px;
+    top: 0;
+}
+
+.plus-icon::after {
+    width: 16px;
+    height: 2px;
+    left: 0;
+    top: 7px;
+}
+
+.ingredients-toggle.active {
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(180deg);
+}
+
+.ingredients-toggle.active .plus-icon {
+    transform: rotate(225deg);
+}
+
+.ingredients-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    background: #fff;
+    padding: 0 20px;
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.5;
+    border-top: 1px solid #ddd;
+}
+
+.makarony-card.active .ingredients-content {
+    max-height: 300px;
+    padding: 15px 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .makarony-grid {
+        padding: 10px;
+    }
+    .makarony-header {
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+    }
+    .ingredients-toggle {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .makarony-grid {
+        padding: 5px;
+    }
+    .makarony-name {
+        font-size: 1.2em;
+    }
+}
+
+/* Heading styles for h2 and h4 to match page consistency */
+#makarony h2, #makarony h4 {
+    background: linear-gradient(180deg, #8b0000 0%, #bf3131 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    max-width: fit-content;
+    margin: 40px auto 50px;
+    box-shadow: 0 4px 15px rgba(191, 49, 49, 0.2);
+}

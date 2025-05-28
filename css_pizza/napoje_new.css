@@ -1,0 +1,90 @@
+/* New CSS for napoje.html - consistent with pizza_new.css style */
+
+body {
+    background-color: #EEEEEE;
+    color: #7D0A0A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #BF3131;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: #EEEEEE;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    color: #EAD196;
+}
+
+.table_front {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(125, 10, 10, 0.2);
+}
+
+.table_front h3, .table_front h4 {
+    color: #7D0A0A;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table.table td {
+    border: 1px solid #BF3131;
+    padding: 12px 15px;
+    font-size: 1em;
+    color: #7D0A0A;
+}
+
+table.table tr:nth-child(even) {
+    background-color: #EAD196;
+}
+
+table.table tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+table.table td:last-child {
+    font-weight: bold;
+    text-align: right;
+    color: #BF3131;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        margin: 8px 0;
+    }
+    .table_front {
+        margin: 15px;
+        padding: 15px;
+    }
+    table.table td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,423 @@
+/* New CSS for promocje.html - Pizzeria redesign with specified color palette */
+
+body {
+    background-color: #EEEEEE;
+    color: #7D0A0A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #BF3131;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: #EEEEEE;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    color: #EAD196;
+}
+
+#pizza_prom {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(125, 10, 10, 0.2);
+}
+
+#pizza_prom h2, #pizza_prom h4, #pizza_prom h5 {
+    color: #7D0A0A;
+    margin-bottom: 10px;
+    text-align: center;
+    animation: fadeInDown 0.8s ease forwards;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table#promocje_menu td {
+    border: 1px solid #BF3131;
+    padding: 12px 15px;
+    font-size: 1em;
+    color: #7D0A0A;
+}
+
+table#promocje_menu tr:nth-child(even) {
+    background-color: #EAD196;
+}
+
+table#promocje_menu tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+table#promocje_menu td:last-child {
+    font-weight: bold;
+    text-align: right;
+    color: #BF3131;
+}
+
+/* Toggle content animation */
+.toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-bottom: 0;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top center;
+    transform: translateY(-10px);
+}
+
+.toggle-content.show {
+    max-height: 600px; /* enough to show content */
+    opacity: 1;
+    margin-bottom: 20px;
+    transform: translateY(0);
+    animation: slideFadeIn 0.5s ease forwards;
+}
+
+/* New slideFadeIn animation */
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* New slideFadeOut animation */
+@keyframes slideFadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        margin: 8px 0;
+    }
+    #pizza_prom {
+        margin: 15px;
+        padding: 15px;
+    }
+    table#promocje_menu td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Tabs styles */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    background-color: #BF3131;
+    color: #EEEEEE;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        padding: 5px 0;
+    }
+
+    .tab-button {
+        flex: 0 0 auto;
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
+.tab-button {
+    background-color: #BF3131;
+    color: #EEEEEE;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #EAD196;
+    color: #7D0A0A;
+}
+
+.tab-button.active {
+    background-color: #BF3131;
+    color: #EEEEEE;
+    box-shadow: 0 4px 10px rgba(125, 10, 10, 0.4);
+}
+
+.tab-content {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(125, 10, 10, 0.2);
+    color: #7D0A0A;
+
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease, visibility 0.4s;
+}
+
+.tab-content.active {
+    opacity: 1;
+    visibility: visible;
+    max-height: 1000px; /* large enough to show content */
+    overflow: visible;
+}
+
+/* New fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Simple fadeInDown animation for headings */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Center and style DODATKI DO PIZZY Z KARTY heading */
+.toggle-topic {
+    text-align: center;
+    background-color: #BF3131;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 300px;
+    margin: 20px auto;
+    cursor: default;
+    user-select: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(125, 10, 10, 0.2);
+}
+
+.toggle-topic:focus {
+    cursor: pointer;
+}
+
+/* Added styles for lists inside tab-content for better readability */
+.tab-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #7D0A0A;
+
+    /* Changed from multi-column to flexbox for better layout */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 900px;
+}
+
+.tab-content ul li {
+    margin-bottom: 6px;
+    width: calc(33.333% - 10px); /* roughly 3 columns with gap */
+    box-sizing: border-box;
+}
+
+.tab-content ul li {
+    margin-bottom: 6px;
+}
+
+/* Styles for PIZZA PROMOCYJNA NA MIEJSCU toggle-content */
+#pizza_prom > .toggle-content:first-of-type {
+    background-color: #F9F4F4;
+    border: 1px solid #BF3131;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(125, 10, 10, 0.1);
+}
+
+#pizza_prom > .toggle-content:first-of-type h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #BF3131;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#pizza_prom > .toggle-content:first-of-type p {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    color: #7D0A0A;
+}
+
+#pizza_prom > .toggle-content:first-of-type ul {
+    list-style-type: disc;
+    padding-left: 30px;
+    margin-top: 10px;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #7D0A0A;
+}
+
+#pizza_prom > .toggle-content:first-of-type ul li {
+    margin-bottom: 8px;
+}
+
+/* Styles for PIZZA PROMOCYJNA (na dowóz) toggle-content */
+#pizza_prom > .toggle-content:nth-of-type(2) {
+    background-color: #FFF8F0;
+    border: 2px solid #BF3131;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 12px rgba(125, 10, 10, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#pizza_prom > .toggle-content:nth-of-type(2):hover {
+    background-color: #FFF0E0;
+    box-shadow: 0 8px 16px rgba(125, 10, 10, 0.25);
+}
+
+#pizza_prom > .toggle-content:nth-of-type(2) p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #6B0A0A;
+    font-weight: 600;
+}
+
+#pizza_prom > .toggle-content:nth-of-type(2) table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+#pizza_prom > .toggle-content:nth-of-type(2) table th,
+#pizza_prom > .toggle-content:nth-of-type(2) table td {
+    border: none;
+    padding: 15px 20px;
+    color: #7D0A0A;
+    text-align: left;
+    background-color: #FFF4E6;
+    border-radius: 8px;
+}
+
+#pizza_prom > .toggle-content:nth-of-type(2) table th {
+    background-color: #BF3131;
+    color: #FFFFFF;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#pizza_prom > .toggle-content:nth-of-type(2) table tr:nth-child(even) td {
+    background-color: #FFE9CC;
+}
+
+#pizza_prom > .toggle-content:nth-of-type(2) table tr:nth-child(odd) td {
+    background-color: #FFF4E6;
+}
+
+/* New styles for DODATKI DO PIZZY Z KARTY table */
+table#dodatki {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #7D0A0A;
+    box-shadow: 0 4px 10px rgba(125, 10, 10, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table#dodatki tr {
+    border-bottom: 1px solid #BF3131;
+}
+
+table#dodatki tr:last-child {
+    border-bottom: none;
+}
+
+table#dodatki td {
+    padding: 12px 15px;
+    border: none;
+}
+
+table#dodatki tr:first-child td {
+    font-weight: bold;
+    color: #BF3131;
+}
+
+table#dodatki td:nth-child(2),
+table#dodatki td:nth-child(3) {
+    text-align: right;
+    font-weight: bold;
+    color: #BF3131;
+}
+
+/* Add spacing and padding to the container div of the table */
+.toggle-content > table#dodatki {
+    margin-bottom: 20px;
+    background-color: #FFF8F0;
+    padding: 15px;
+    border-radius: 8px;
+}

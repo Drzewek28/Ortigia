@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makarony</title>
+    <link rel="stylesheet" href="css_pizza/makarony_new.css" />
+    <link rel="stylesheet" href="css_pizza/main_new.css" />
+    <link rel="icon" type="image/png" href="favicon/logo_465x320.png" />
+</head>
+<body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Strona główna</a>
+            <a href="pizza_new.html">Pizza</a>
+            <a href="dania.html">Dania obiadowe</a>
+            <a href="makarony.html">Makarony i sałatki</a>
+            <a href="promocje.html">Pizza promocyjna</a>
+            <a href="napoje.html">Napoje</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="zdjecia.html">Zdjęcia</a>
+        </div>
+    </nav>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+            hamburger.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    <div id="makarony">
+        <h2>MAKARONY (Porcja 400g)</h2>
+        <div class="makarony-grid">
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Penne Pomodoro</div>
+                    <div class="pizza-prices">
+                        <span>30zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron penne z sosem pomidorowym, bazylią i parmezanem
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Penne z kurczakiem</div>
+                    <div class="pizza-prices">
+                        <span>32zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron penne z kurczakiem, szpinakiem i pomidorkami koktailowymi z sosem śmietanowym
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Spaghetti Bolognesse</div>
+                    <div class="pizza-prices">
+                        <span>32zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron spaghetti z sosem mięsno-warzywnym
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Spaghetti Carbonara</div>
+                    <div class="pizza-prices">
+                        <span>32zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron spaghetti z boczkiem, cebulą, czosnkiem w sosie śmietanowym
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Tagliatelle Salmone</div>
+                    <div class="pizza-prices">
+                        <span>32zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron w sosie śmietanowo-cytrynowym z łososiem, szparagami i cebulą
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Tagliatelle Mexikana</div>
+                    <div class="pizza-prices">
+                        <span>32zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron z szynką, brokułem, cebulą z ostrym sosem śmietanowym
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Penne z indykiem</div>
+                    <div class="pizza-prices">
+                        <span>32zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    makaron penne z indykiem, cukinią, fetą, czosnkiem i rukolą
+                </div>
+            </div>
+        </div>
+        <h2 id="sal">SAŁATKI (Porcja 400g)</h2>
+        <h4>Do każdej sałatki bułeczki gratis</h4>
+        <div class="makarony-grid">
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka Grecka</div>
+                    <div class="pizza-prices">
+                        <span>30zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    sałata lodowa, pomidor, ogórek, papryka, cebula czerwona, feta, oliwki, sos vinegrette
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka z kurczakiem</div>
+                    <div class="pizza-prices">
+                        <span>30zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    mix sałat, pomidor, pomarańcza, cebula czerwona, oliwki, pieczony kurczak, seler naciowy, cytrynowy sos vinegrette
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka Cesar</div>
+                    <div class="pizza-prices">
+                        <span>30zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    sałata lodowa, grillowana pierś kurczaka, bekon, grzanki, pomidor, ogórek, sos ala cesar
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka z łososiem</div>
+                    <div class="pizza-prices">
+                        <span>30zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    mix sałat, feta, pomidorki koktajlowe, oliwki czarne, łosoś wędzony, cebula czerwona, cytrynowy vinegrette
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka z szynką parmeńską</div>
+                    <div class="pizza-prices">
+                        <span>30zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    sałata, rukola, pieczone-marynowane buraki, słonecznik, ser pleśniowy, szynka parmeńska, sos miodowo-musztardowy
+                </div>
+            </div>
+            <div class="makarony-card">
+                <div class="makarony-header">
+                    <div class="makarony-name">Sałatka z kurczakiem</div>
+                    <div class="pizza-prices">
+                        <span>30zł</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    sałata lodowa, rukola, pieczona pierś z kurczaka, pomidorki koktajlowe, prażone orzechy włoskie, gruszka, ser pleśniowy, sos balsamico
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js_pizza/pizza_cards.js"></script>
+</body>
+</html>

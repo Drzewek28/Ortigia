@@ -1,0 +1,67 @@
+/* New CSS for zdjecia.html - Pizzeria redesign with specified color palette */
+
+body {
+    background-color: #EEEEEE;
+    color: #7D0A0A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #BF3131;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: #EEEEEE;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    color: #EAD196;
+}
+
+#zdjecia {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(125, 10, 10, 0.2);
+    text-align: center;
+}
+
+#zdjecia h2, #zdjecia h4, #zdjecia h5 {
+    color: #7D0A0A;
+    margin-bottom: 10px;
+}
+
+#zdjecia img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 5px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(125, 10, 10, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        margin: 8px 0;
+    }
+    #zdjecia {
+        margin: 15px;
+        padding: 15px;
+    }
+}

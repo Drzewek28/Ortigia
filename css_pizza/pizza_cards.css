@@ -1,0 +1,188 @@
+/* Enhanced CSS for pizza cards and toggle functionality */
+
+.pizza-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pizza-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(125, 10, 10, 0.15);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 1px solid #bf3131;
+    position: relative;
+}
+
+.pizza-card:hover {
+    box-shadow: 0 8px 30px rgba(191, 49, 49, 0.3);
+    transform: translateY(-5px);
+}
+
+.pizza-header {
+    background: linear-gradient(135deg, #bf3131 0%, #7d0a0a 100%);
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    column-gap: 15px;
+}
+
+.pizza-header h4 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.pizza-prices {
+    display: flex;
+    gap: 15px;
+    font-weight: 600;
+    justify-content: flex-start; /* Align all prices to the left */
+}
+
+.pizza-prices span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+    transition: background 0.3s ease;
+    min-width: 80px; /* fixed width to align all price tags */
+    text-align: center;
+    display: inline-block;
+}
+
+.pizza-prices span:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.ingredients-toggle {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-left: 15px;
+}
+
+.ingredients-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.ingredients-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.plus-icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.plus-icon::before {
+    width: 2px;
+    height: 16px;
+    left: 7px;
+    top: 0;
+}
+
+.plus-icon::after {
+    width: 16px;
+    height: 2px;
+    left: 0;
+    top: 7px;
+}
+
+.ingredients-toggle.active {
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(180deg);
+}
+
+.ingredients-toggle.active .plus-icon {
+    transform: rotate(225deg);
+}
+
+.ingredients-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    background: #fff;
+    padding: 0 20px;
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.5;
+    border-top: 1px solid #ddd;
+}
+
+.pizza-card.active .ingredients-content {
+    max-height: 300px;
+    padding: 15px 20px;
+}
+
+#pizza h3 {
+    background: linear-gradient(135deg, #bf3131 0%, #7d0a0a 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    max-width: fit-content;
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 15px rgba(191, 49, 49, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pizza-grid {
+        padding: 10px;
+    }
+    .pizza-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .pizza-prices {
+        gap: 10px;
+    }
+    .ingredients-toggle {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .pizza-grid {
+        padding: 5px;
+    }
+    .pizza-header h4 {
+        font-size: 1.2em;
+    }
+    .pizza-prices {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

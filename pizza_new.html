@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza</title>
+    <link rel="stylesheet" href="css_pizza/pizza_new.css" />
+    <link rel="stylesheet" href="css_pizza/pizza_cards.css" />
+    <link rel="stylesheet" href="css_pizza/main_new.css" />
+    <link rel="icon" type="image/png" href="favicon/logo_465x320.png" />
+</head>
+<body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Strona główna</a>
+            <a href="pizza_new.html">Pizza</a>
+            <a href="dania.html">Dania obiadowe</a>
+            <a href="makarony.html">Makarony i sałatki</a>
+            <a href="promocje.html">Pizza promocyjna</a>
+            <a href="napoje.html">Napoje</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="zdjecia.html">Zdjęcia</a>
+        </div>
+    </nav>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+            hamburger.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    <div id="pizza">
+        <h3 style="text-align: center;">Proponujemy Państwu ciasto cienkie lub średnie.</h3>
+
+        <div class="pizza-grid">
+            <div class="pizza-card" style="--animation-order: 0;">
+                <div class="pizza-header">
+                    <h4>1. Margherita</h4>
+                    <div class="pizza-prices">
+                        <span>22,00 (32cm)</span>
+                        <span>41,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 1;">
+                <div class="pizza-header">
+                    <h4>2. Vezuwiusz</h4>
+                    <div class="pizza-prices">
+                        <span>23,00 (32cm)</span>
+                        <span>42,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, szynka</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 2;">
+                <div class="pizza-header">
+                    <h4>3. Funghi</h4>
+                    <div class="pizza-prices">
+                        <span>23,00 (32cm)</span>
+                        <span>42,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, pieczarki</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 3;">
+                <div class="pizza-header">
+                    <h4>4. Hawajska</h4>
+                    <div class="pizza-prices">
+                        <span>23,00 (32cm)</span>
+                        <span>43,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, szynka, ananas</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 4;">
+                <div class="pizza-header">
+                    <h4>5. Capricciosa</h4>
+                    <div class="pizza-prices">
+                        <span>25,00 (32cm)</span>
+                        <span>43,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, szynka, pieczarki, oliwki</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 5;">
+                <div class="pizza-header">
+                    <h4>6. Salami</h4>
+                    <div class="pizza-prices">
+                        <span>25,00 (32cm)</span>
+                        <span>47,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, salami, oliwki, czosnek, extra ser</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 6;">
+                <div class="pizza-header">
+                    <h4>7. Vegetariana</h4>
+                    <div class="pizza-prices">
+                        <span>28,00 (32cm)</span>
+                        <span>45,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, pieczarki, papryka, cebula, oliwki</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 7;">
+                <div class="pizza-header">
+                    <h4>8. Cukinia</h4>
+                    <div class="pizza-prices">
+                        <span>29,00 (32cm)</span>
+                        <span>49,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, cukinia, feta, szpinak, czosnek, fasolka</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 8;">
+                <div class="pizza-header">
+                    <h4>9. Werona</h4>
+                    <div class="pizza-prices">
+                        <span>29,00 (32cm)</span>
+                        <span>49,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, salami pikantne, boczek, cebula, pieczarki</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 9;">
+                <div class="pizza-header">
+                    <h4>10. Grecka</h4>
+                    <div class="pizza-prices">
+                        <span>29,00 (32cm)</span>
+                        <span>49,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, papryka, pomidor, oliwki, feta, szparagi</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 10;">
+                <div class="pizza-header">
+                    <h4>11. Szpinakowa</h4>
+                    <div class="pizza-prices">
+                        <span>29,00 (32cm)</span>
+                        <span>48,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, szpinak, jajko, czosnek, karczochy</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 11;">
+                <div class="pizza-header">
+                    <h4>12. Serowa</h4>
+                    <div class="pizza-prices">
+                        <span>30,00 (32cm)</span>
+                        <span>48,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, 4 rodzaje sera</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 12;">
+                <div class="pizza-header">
+                    <h4>13. Florencja</h4>
+                    <div class="pizza-prices">
+                        <span>30,00 (32cm)</span>
+                        <span>48,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, kurczak, ananas, brzoskwinia, oliwki, extra ser</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 13;">
+                <div class="pizza-header">
+                    <h4>14. Genua</h4>
+                    <div class="pizza-prices">
+                        <span>30,00 (32cm)</span>
+                        <span>50,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, boczek, pieczarki, pomidor, papryka, kurczak, kiełbasa, czosnek</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 14;">
+                <div class="pizza-header">
+                    <h4>15. Pappa</h4>
+                    <div class="pizza-prices">
+                        <span>30,00 (32cm)</span>
+                        <span>50,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, szynka, kurczak, pomidor, kukurydza, extra ser</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 15;">
+                <div class="pizza-header">
+                    <h4>16. Ferrara</h4>
+                    <div class="pizza-prices">
+                        <span>31,00 (32cm)</span>
+                        <span>51,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, boczek, kurczak gyros, oscypek, ogórek kiszony</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 16;">
+                <div class="pizza-header">
+                    <h4>17. Salerno</h4>
+                    <div class="pizza-prices">
+                        <span>31,00 (32cm)</span>
+                        <span>51,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, seler naciowy, fasolka szparagowa, cebula, brokuł</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 17;">
+                <div class="pizza-header">
+                    <h4>18. Al Paccino</h4>
+                    <div class="pizza-prices">
+                        <span>31,00 (32cm)</span>
+                        <span>51,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, boczek, wołowina, papryka jalapeno, cebula, papryka</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 18;">
+                <div class="pizza-header">
+                    <h4>19. Padwa</h4>
+                    <div class="pizza-prices">
+                        <span>32,00 (32cm)</span>
+                        <span>52,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, kurczak, rukola, cebula, pomidor, sos czosnkowy</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 19;">
+                <div class="pizza-header">
+                    <h4>20. Katania</h4>
+                    <div class="pizza-prices">
+                        <span>33,00 (32cm)</span>
+                        <span>53,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, extra salami, extra chili, extra ser</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 20;">
+                <div class="pizza-header">
+                    <h4>21. Mesyna</h4>
+                    <div class="pizza-prices">
+                        <span>33,00 (32cm)</span>
+                        <span>53,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, łosoś, anchois, jajko, cebula, pomidor</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 21;">
+                <div class="pizza-header">
+                    <h4>22. Parma</h4>
+                    <div class="pizza-prices">
+                        <span>34,00 (32cm)</span>
+                        <span>54,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, szynka parmeńska, rukola, parmezan</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 22;">
+                <div class="pizza-header">
+                    <h4>23. Ortigia</h4>
+                    <div class="pizza-prices">
+                        <span>35,00 (32cm)</span>
+                        <span>55,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, osiem dowolnych składników</p>
+                </div>
+            </div>
+            <div class="pizza-card" style="--animation-order: 23;">
+                <div class="pizza-header">
+                    <h4>24. LiVorno</h4>
+                    <div class="pizza-prices">
+                        <span>36,00 (32cm)</span>
+                        <span>56,00 (42cm)</span>
+                    </div>
+                    <button class="ingredients-toggle" aria-label="Toggle ingredients">
+                        <span class="plus-icon"></span>
+                    </button>
+                </div>
+                <div class="ingredients-content">
+                    <p>sos, ser, borowiki, kurki, czosnek, podgrzybki</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.ingredients-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.pizza-card');
+                card.classList.toggle('active');
+                button.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

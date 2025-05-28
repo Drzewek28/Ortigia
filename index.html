@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzeria Ortigia</title>
+    <link rel="stylesheet" href="css_pizza/main_new.css" />
+    <link rel="icon" type="image/png" href="favicon/logo_465x320.png" />
+  </head>
+
+    <body>
+    <nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Strona główna</a>
+        <a href="pizza_new.html">Pizza</a>
+        <a href="dania.html">Dania obiadowe</a>
+        <a href="makarony.html">Makarony i sałatki</a>
+        <a href="promocje.html">Pizza promocyjna</a>
+        <a href="napoje.html">Napoje</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="zdjecia.html">Zdjęcia</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1>Zapraszamy na pyszną pizzę, dania obiadowe i nie tylko!</h1>
+    </div>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+        hamburger.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('active');
+      });
+    </script>
+
+    <div class="content-container">
+      <h2>Codziennie 11-20</h2>
+      <p class="contact-info">Lublin, ul.Szmaragdowa 24 lok.6</p>
+      <p class="contact-info">Tel: 537-530-650 | 81-531-34-29</p>
+    </div>
+  </body>
+</html>

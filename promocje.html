@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza promocyjna</title>
+    <link rel="stylesheet" href="css_pizza/promocje_new.css">
+    <link rel="stylesheet" href="css_pizza/promocje_toggle.css">
+    <link rel="stylesheet" href="css_pizza/main_new.css">
+    <link rel="icon" type="image/png" href="favicon/logo_465x320.png" />
+</head>
+<body>
+    <nav>
+		<button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<div class="nav-links">
+			<a href="index.html">Strona główna</a>
+			<a href="pizza_new.html">Pizza</a>
+			<a href="dania.html">Dania obiadowe</a>
+			<a href="makarony.html">Makarony i sałatki</a>
+			<a href="promocje.html">Pizza promocyjna</a>
+			<a href="napoje.html">Napoje</a>
+			<a href="kontakt.html">Kontakt</a>
+			<a href="zdjecia.html">Zdjęcia</a>
+		</div>
+	</nav>
+    <script>
+		const hamburger = document.querySelector('.hamburger');
+		const navLinks = document.querySelector('.nav-links');
+
+		hamburger.addEventListener('click', () => {
+			const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+			hamburger.setAttribute('aria-expanded', !expanded);
+			navLinks.classList.toggle('active');
+		});
+	</script>
+    <div id="pizza_prom">
+        <h3 class="toggle-topic" tabindex="0">PIZZA PROMOCYJNA NA MIEJSCU (DOSTĘPNA TYLKO W LOKALU)</h3>
+        <div class="toggle-content hidden">
+            <h2>Cena: 24,00 zł</h2>
+            <p><strong>Oferta na wynos:</strong> + 1 zł za opakowanie, cena 25,00 zł</p>
+            <p><strong>Opis:</strong> Pizza 32 cm z trzema dowolnie wybranymi składnikami:</p>
+            <ul>
+                <li>jeden mięsny</li>
+                <li>dwa warzywne</li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="toggle-topic" tabindex="0">PIZZA PROMOCYJNA (na dowóz)</h3>
+        <div class="toggle-content hidden">
+            <p><strong>Dostawa:</strong> płatna 5 zł</p>
+            <p><strong>Minimalna wartość zamówienia:</strong> 40 zł</p>
+            <table id="dowoz">
+                <thead>
+                    <tr>
+                        <th>Oferta</th>
+                        <th>Cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2 Pizze 32 cm z sosem, serem i 3 dowolnymi składnikami</td>
+                        <td>48,00 zł</td>
+                    </tr>
+                    <tr>
+                        <td>3 Pizze 32 cm z sosem, serem i 3 dowolnymi składnikami</td>
+                        <td>72,00 zł</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <h3 class="toggle-topic" tabindex="0">DODATKI DO PIZZY (do promocyjnych)</h3>
+        <div class="toggle-content hidden">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="warzywa">WARZYWA</button>
+                <button class="tab-button" data-tab="miesne">MIĘSNE</button>
+                <button class="tab-button" data-tab="sery">SERY</button>
+                <button class="tab-button" data-tab="ryby">RYBY</button>
+            </div>
+            <div class="tab-content active" id="warzywa">
+                <ul>
+                    <li>pieczarki</li>
+                    <li>papryka</li>
+                    <li>cebula</li>
+                    <li>kukurydza</li>
+                    <li>brokuł</li>
+                    <li>szpinak</li>
+                    <li>cukinia</li>
+                    <li>pomidory</li>
+                    <li>ogórek kiszony</li>
+                    <li>rukola</li>
+                    <li>seler naciowy</li>
+                    <li>bazylia</li>
+                    <li>papryka jalapeno</li>
+                    <li>chilli</li>
+                    <li>czosnek</li>
+                    <li>fasolka szparagowa</li>
+                    <li>oliwki czarne i zielone</li>
+                    <li>jajko</li>
+                    <li>marchew</li>
+                    <li>oregano</li>
+                    <li>ananas</li>
+                    <li>brzoskwinie</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="miesne">
+                <ul>
+                    <li>szynka</li>
+                    <li>bekon</li>
+                    <li>salami</li>
+                    <li>salami pikantne</li>
+                    <li>kurczak</li>
+                    <li>kurczak gyros</li>
+                    <li>kiełbasa</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="sery">
+                <ul>
+                    <li>parmezan</li>
+                    <li>feta</li>
+                    <li>oscpek</li>
+                    <li>chedar</li>
+                    <li>camembert</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="ryby">
+                <ul>
+                    <li>tuńczyk</li>
+                    <li>anchois</li>
+                    <li>owoce morza</li>
+                    <li>łosoś</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <h3 class="toggle-topic" tabindex="0">DODATKI DO PIZZY Z KARTY</h3>
+        <div class="toggle-content hidden">
+            <h4><strong>Sosy:</strong> pomidorowy, ketchup, czosnkowy, ostry  - 3,00 zł</h4>
+            <p>Wszystkie dodatki są świeże i najwyższej jakości, aby zapewnić najlepszy smak Twojej pizzy.</p>
+            <table id="dodatki">
+                <tr>
+                    <td><strong>Dodatki do pizzy:</strong></td>          <td>32 cm</td>               <td>42 cm</td>
+                </tr>
+                <tr>
+                    <td>Warzywne</td>                      <td>3,00 zł</td>                  <td>4,00 zł</td>
+                </tr>
+                <tr>
+                    <td>Mięso, sery</td>                     <td>3,00 zł</td>                 <td>5,00 zł</td>
+                </tr>
+                <tr>
+                    <td>Ryby</td>                             <td>3,00 zł</td>                  <td>5,00 zł</td>
+                </tr>
+            </table>
+            <p>Zapraszamy do skorzystania z naszej oferty dodatków, które wzbogacą smak każdej pizzy!</p>
+        </div>
+    </div>
+
+        <script>
+        document.querySelectorAll('.toggle-topic').forEach(topic => {
+            topic.addEventListener('click', () => {
+                const content = topic.nextElementSibling;
+                if (content) {
+                    if (content.classList.contains('show')) {
+                        content.classList.remove('show');
+                        content.classList.add('hidden');
+                    } else {
+                        content.classList.add('show');
+                        content.classList.remove('hidden');
+                    }
+                }
+            });
+            topic.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    topic.click();
+                }
+            });
+        });
+
+        // Tabs functionality for DODATKI DO PIZZY
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const target = button.getAttribute('data-tab');
+
+                if (button.classList.contains('active')) return; // Already active
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                tabContents.forEach(content => {
+                    if (content.id === target) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

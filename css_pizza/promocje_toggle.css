@@ -1,0 +1,20 @@
+/* CSS for toggle functionality on promocje.html */
+
+.toggle-content {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.toggle-topic {
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-topic:focus {
+    outline: 2px solid #BF3131;
+    outline-offset: 2px;
+}

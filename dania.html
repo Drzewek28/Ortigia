@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dania obiadowe</title>
+    <link rel="stylesheet" href="css_pizza/dania_new.css">
+    <link rel="stylesheet" href="css_pizza/main_new.css">
+    <link rel="icon" type="image/png" href="favicon/logo_465x320.png" />
+</head>
+<body>
+    <nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Strona główna</a>
+        <a href="pizza_new.html">Pizza</a>
+        <a href="dania.html">Dania obiadowe</a>
+        <a href="makarony.html">Makarony i sałatki</a>
+        <a href="promocje.html">Pizza promocyjna</a>
+        <a href="napoje.html">Napoje</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="zdjecia.html">Zdjęcia</a>
+      </div>
+    </nav>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+        hamburger.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('active');
+      });
+    </script>
+
+<div id="dania">
+    <h2>DANIA OBIADOWE</h2>
+    <h4>Porcja mięsa/ryby - 200g</h4>
+    <h5>Do wyboru: ziemniaki gotowane, frytki, ryż, kasza</h5>
+
+<table id="dania_menu">
+    <tr>
+        <td>Karczek duszony</td>
+        <td>26zł</td>
+    </tr>
+    <tr>
+        <td>Kurczak po włosku</td>
+        <td>30zł</td>
+    </tr>
+    <tr>
+        <td>Schab z warzywami</td>
+        <td>30zł</td>
+    </tr>
+    <tr>
+        <td>Polędwiczki wieprzowe w sosie borowikowym</td>
+        <td>33zł</td>
+    </tr>
+    <tr>
+        <td>Łosoś pieczony</td>
+        <td>39zł</td>
+    </tr>
+    <tr>
+        <td>Pierś w szynce parmeńskiej</td>
+        <td>32zł</td>
+    </tr>
+    <tr>
+        <td>Szaszłyk polędwiczek drobiowych</td>
+        <td>30zł</td>
+    </tr>
+    <tr>
+        <td>Udziec z indyka (podawany z kaszą, sosem grzybowym i ogórkiem kiszonym)</td>
+        <td>27zł</td>
+    </tr>
+    <tr>
+        <td>Pierogi ruskie (400g) (podawane ze smażoną cebulką)</td>
+        <td>25zł</td>
+    </tr>
+</table>
+
+<h2 id="zupy">Zupy:</h2>
+<table id="zupy_menu">
+    <tr>
+        <td>POMIDOROWA</td>
+        <td>10zł</td>
+    </tr>
+    <tr>
+        <td>ŻUREK</td>
+        <td>12zł</td>
+    </tr>
+    <tr>
+        <td>WĘGIERSKA GULASZOWA</td>
+        <td>13zł</td>
+    </tr>
+</table>
+
+<h2>Dania fast-food:</h2>
+<table id="fast-food">
+    <tr>
+        <td>Kanapka Gyros XXL</td>
+        <td>21zł</td>
+    </tr>
+    <tr>
+        <td>Gyros, frytki i świeże warzywa</td>
+        <td>22zł</td>
+    </tr>
+    <tr>
+        <td>Tortilla z kurczakiem</td>
+        <td>21zł</td>
+    </tr>
+    <tr>
+        <td>Schoarma, frytki, surówka</td>
+        <td>23zł</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

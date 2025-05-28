@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Napoje</title>
+      <link rel="stylesheet" href="css_pizza/napoje_new.css" />
+      <link rel="stylesheet" href="css_pizza/main_new.css" />
+      <link rel="icon" type="image/png" href="favicon/logo_465x320.png" />
+    </head>
+<body>
+      <nav>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="index.html">Strona główna</a>
+          <a href="pizza_new.html">Pizza</a>
+          <a href="dania.html">Dania obiadowe</a>
+          <a href="makarony.html">Makarony i sałatki</a>
+          <a href="promocje.html">Pizza promocyjna</a>
+          <a href="napoje.html">Napoje</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="zdjecia.html">Zdjęcia</a>
+        </div>
+      </nav>
+      <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+          const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+          hamburger.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('active');
+        });
+      </script>
+    <div class="table_front">
+      <h3>NAPOJE</h3>
+      <h4>Zimne</h4>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>Coca-cola</td>
+            <td>0,850L</td>
+            <td>12zł</td>
+          </tr>
+
+          <tr>
+            <td>Sprite</td>
+            <td>0,850L</td>
+            <td>12zł</td>
+          </tr>
+
+          <tr>
+            <td>Fanta</td>
+            <td>0,850L</td>
+            <td>12zł</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Gorące</h4>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>Herbata</td>
+            <td>6,00</td>
+          </tr>
+          <tr>
+            <td>Kawa Latte</td>
+            <td>8,00</td>
+          </tr>
+          <tr>
+            <td>Kawa</td>
+            <td>6,00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,489 @@
+/* New CSS for pizza.html - Pizzeria redesign with specified color palette */
+
+body {
+    background-color: #EEEEEE;
+    color: #7D0A0A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #BF3131;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: #EEEEEE;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    color: #EAD196;
+}
+
+#pizza {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(125, 10, 10, 0.15);
+    transition: all 0.3s ease;
+}
+
+#pizza h3 {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 30px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #BF3131 0%, #7D0A0A 100%);
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(191, 49, 49, 0.2);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform 0.3s ease;
+}
+
+#pizza h3::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 48px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+#pizza h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateZ(-1px);
+    border-radius: 50px;
+}
+
+#pizza > p {
+    text-align: center;
+    color: #7D0A0A;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 40px;
+    padding: 10px;
+    background: rgba(191, 49, 49, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+table#pizza_menu td {
+    border: 1px solid #BF3131;
+    padding: 12px 15px;
+    font-size: 1em;
+    color: #7D0A0A;
+}
+
+table#pizza_menu tr:nth-child(even) {
+    background-color: #EAD196;
+}
+
+table#pizza_menu tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+table#pizza_menu td:last-child {
+    font-weight: bold;
+    text-align: right;
+    color: #BF3131;
+}
+
+.pizza-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease;
+}
+
+.pizza-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* animation: scaleIn 0.5s ease forwards; */
+    /* opacity: 0; */
+    /* transform: translateY(20px); */
+    width: 100%;
+    border: 1px solid rgba(191, 49, 49, 0.1);
+    position: relative;
+    isolation: isolate;
+}
+
+.pizza-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(191, 49, 49, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.pizza-card:hover::before {
+    opacity: 1;
+}
+
+.pizza-card:nth-child(n) {
+    animation-delay: calc(0.1s * var(--animation-order, 0));
+}
+
+.pizza-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(191, 49, 49, 0.2);
+}
+
+.pizza-card.active {
+    animation: pulseGlow 2s infinite;
+}
+
+.pizza-header {
+    padding: 25px;
+    background: linear-gradient(135deg, #BF3131 0%, #7D0A0A 100%);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.pizza-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pizza-card.active .pizza-header {
+    background: linear-gradient(135deg, #7D0A0A 0%, #BF3131 100%);
+}
+
+.pizza-card:hover .pizza-header::before {
+    opacity: 1;
+}
+
+.pizza-header h4 {
+    margin: 0;
+    color: white !important;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.pizza-header h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+}
+
+.pizza-prices {
+    display: flex;
+    gap: 20px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.pizza-prices span {
+    background: rgba(255,255,255,0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pizza-prices span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.pizza-prices span:hover::before {
+    left: 100%;
+}
+
+.pizza-prices span:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.05);
+}
+
+.ingredients-toggle {
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    margin-left: 15px;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ingredients-toggle:hover {
+    transform: rotate(90deg) scale(1.1);
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.ingredients-toggle:active {
+    transform: rotate(90deg) scale(0.95);
+}
+
+.ingredients-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.ingredients-toggle:focus:not(:focus-visible) {
+    box-shadow: none;
+}
+
+.plus-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 8px auto;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.plus-icon::before {
+    width: 2px;
+    height: 16px;
+    left: 7px;
+    top: 0;
+}
+
+.plus-icon::after {
+    width: 16px;
+    height: 2px;
+    left: 0;
+    top: 7px;
+}
+
+.ingredients-toggle.active {
+    background: rgba(255,255,255,0.25);
+    transform: rotate(180deg);
+}
+
+.ingredients-toggle.active .plus-icon {
+    transform: rotate(225deg);
+}
+
+.ingredients-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: #ffffff;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.ingredients-content p {
+    margin: 0;
+    padding: 20px 25px;
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Active states for ingredients */
+.pizza-card.active .ingredients-content {
+    max-height: 300px; /* Increased max-height to ensure content fits */
+}
+
+.pizza-card.active .ingredients-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced ingredient styling */
+/* .ingredients-content p {
+    position: relative;
+    padding-left: 45px;
+} */
+
+/* .ingredients-content p::before {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+} */
+
+/* Ensure text remains visible during animation */
+.ingredients-content {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Add transition for smoother animation */
+.pizza-card {
+    transition: all 0.3s ease-out;
+}
+
+/* Active card styling */
+.pizza-card.active {
+    margin: 15px 0;
+    box-shadow: 0 8px 30px rgba(191, 49, 49, 0.15);
+}
+
+@media (max-width: 768px) {
+    .pizza-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .pizza-header {
+        padding: 20px;
+        grid-template-columns: 1fr auto;
+    }
+
+    .pizza-prices {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+    .pizza-header h4 {
+        font-size: 1.2em;
+    }
+
+    .pizza-prices {
+        font-size: 0.9em;
+        gap: 10px;
+    }
+
+    .ingredients-content p {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    #pizza {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    #pizza h3 {
+        font-size: 1.6em;
+    }
+
+    #pizza p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .pizza-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pizza-prices {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pizza-prices span {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pizza-header {
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .ingredients-toggle {
+        margin: 0 auto;
+    }
+
+    .pizza-header h4::before {
+        display: none;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        margin: 8px 0;
+    }
+    #pizza {
+        margin: 15px;
+        padding: 15px;
+    }
+    table#pizza_menu td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}
